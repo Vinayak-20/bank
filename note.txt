@@ -1,0 +1,110 @@
+DATA BINDING IN ANGULAR
+..........................
+
+ts-component
+html-view
+........
+methods:
+
+1. one way binding
+
+   1.1. component to view
+
+     1.1.1. string interpollation, {{}}
+     1.1.2  property binding,       [property]="value"
+
+
+   1.2. view to component
+     
+     1.2.2 event binding,     (eventname)="method name()"
+     1.2.2 event binding using $event, (event name)="methodname($event)"    
+     1.2.3 event binding using template rendering variable, #variable
+...........................................................................................
+
+2. two way binding
+
+  2.1 ngmodel  Formsmodule is the mehod, [(ngmodel)]="value"
+
+.....................................................................
+
+create new homepage
+...............
+
+Redirection in ANGULAR
+
+method is navigateByUrl
+predifined method and that class is Router
+
+AppRoutingModule- routing module
+...................
+for Redirection we use navigateByUrl method
+Router- class
+
+AppRoutingModule-module
+
+...........
+- To use one class method in another class we use- Dependency injection.
+- We inject Dependency in constructor 
+- first step is , we add a access pecifier may be public or private
+- next we add a variable
+- then class name, example- private variable: Classname
+
+
+
+
+...........................
+Angular services
+
+to do all property together
+its a service in which all can access data from it
+
+steps to create service
+  first we create a folder in  bank_app --> src --> app --> newfolder
+  open cmd in new folder and type --> ng g s servicename
+
+...............................................
+/ path is used to move from one page to other
+
+
+
+
+
+
+
+
+...///////////////////////////////////////////////////////////////////..............
+
+ANGULAR DIRECTIVES
+
+ Methods
+
+1.Structural dirctives- to handle structured data in view(html page) of a component
+  
+     .to use for loop in html /to access element from an array we use - ngFor
+
+
+
+
+.////...................//////////////////////////////////////////////.........................
+Form Validation In Angular
+
+we can create forms in two ways
+
+  1.Template Driven Form
+  
+  2. Model Driven Form
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+          

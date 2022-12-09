@@ -1,0 +1,41 @@
+.a{
+    /* background-color: black; */
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 30%;
+    margin-top: 5%;
+    /* background-color: white; */
+    /* padding: 40px; */
+}
+h1{
+    color: white;
+}
+.register{
+    background-color: rgba(236, 234, 234, 0.4);
+    padding: 50px;
+    width: 2000vw;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+input{
+    background-color: black;
+    color: white;
+}
+button{
+    height: 90px;
+    width: 90px;
+    border: none;
+
+}
+button:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}

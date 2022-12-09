@@ -1,11 +1,27 @@
-
-    <div class="login">
-        <i class="fa-regular fa-user fa-3x"></i>
-
-        <h2>Hello, User</h2>
-        <input type="text" placeholder="Account number"> <br> <br>
-        <input type="text" placeholder="Password"> <br> <br> 
-        <button>login</button> <br> 
- <p>Dont have an account?<a href=""> Register</a></p>
-
+<form (ngSubmit)="login()">
+    
+        <div>
+            <h1 style="color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">{{aim}}</h1>
+        </div>
+        
+    <div>
+            
+            <div class="login">
+                <i class="fa-regular fa-user fa-3x"></i>
+        
+                <h2>Hello, User</h2>
+                <!-- <input #acno type="text" [placeholder]="data" id="aid" name="acn"> <br> <br> -->
+                <!-- <input (change)="pswChange($event)" type="password" placeholder="Password" id="pid" name="psw"> <br> <br>  -->
+                 <input [(ngModel)]="acno" type="text" [placeholder]="data" id="aid" name="acn"> <br> <br> 
+        
+                <!-- <input #psw type="password" placeholder="Password" id="pid" name="psw"> <br> <br>  -->
+                 <input [(ngModel)]="psw" type="password" placeholder="Password" id="pid" name="psw"> <br> <br> 
+        
+        
+        
+                <button type="submit">Login</button> <br> 
+         <p>Dont have an account?<a routerLink="register"> Register</a></p>
+        
+            </div>
     </div>
+</form>

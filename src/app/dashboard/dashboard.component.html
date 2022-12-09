@@ -1,0 +1,37 @@
+
+   <!-- <h1 style="color: white;">Welcome {{user}}</h1>
+   <a href="/transaction">view trasaction history</a> -->
+    
+    <div class="dashboard">
+        <div>
+            <h1 style="color: white;">Welcome {{user}}</h1>
+            <a  routerLink="/transaction">view trasaction history</a>
+        </div>
+        
+    
+      <form (ngSubmit)="deposit()">
+            <div class="deposit">
+                <h2>Deposit Form</h2>
+        
+                <input [(ngModel)]="acno"  name="acno" type="text" id="acno" placeholder="Account number"> <br><br>
+                <input [(ngModel)]="psw"  name="psw" type="password" id="psw" placeholder="Password"> <br><br>
+                <input [(ngModel)]="amnt"  name="amnt" type="text" id="amnt" placeholder="Amount"> <br><br>
+    
+                <button type="submit" >Deposit</button>
+        
+            </div>
+      </form>
+    
+       <form (ngSubmit)="withdraw()">
+            <div class="withdraw">
+                <h2>Withdrawal Form</h2>
+                <input [(ngModel)]="a1"  name="a1" type="text" id="a1" placeholder="Account number"> <br>  <br>
+                <input [(ngModel)]="p1"   name="p1" type="password" id="p1" placeholder="Password"> <br><br>
+                <input  [(ngModel)]="b1"  name="b1" type="text" id="b1" placeholder="Amount"> <br><br>
+    
+                <button type="submit">Withdraw</button>
+        
+            </div>
+       </form>
+    
+    </div>
