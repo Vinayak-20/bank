@@ -1,16 +1,25 @@
-
-
-<form (ngSubmit)="register()">
 <div class="a">
-      <div class="register">
-            <h1>Registration form</h1> <br> <br>
-            <label for="u1"> </label> 
-                <input type="uname" [(ngModel)]="acno" id="a1" placeholder="Account number"> <br> <br>
-                <input [(ngModel)]="uname" type="text" id="u1" placeholder="username"> <br> <br>
-                <input [(ngModel)]="psw" type="password" id="p1" placeholder="Password"> <br><br>
-                    <button type="submit" >register</button>
-      </div>
-                    
-</div>
-</form>
 
+      <form (ngSubmit)="register()" [formGroup]=" registerForm">
+            <div>
+                  <div class="register">
+                        <h1>Registration form</h1> <br> <br>
+                        <!-- <label for="u1"> </label>  -->
+                        <input type="text" name="acno" formControlName="acno" id="a1" placeholder="Account number"> 
+                        <br>
+                        
+              <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched" ><p >incorrect account number</p></div>
+                        
+                        <input type="text" name="uname" formControlName="uname" id="u1" placeholder="username"> <br>
+                        <br>
+                        <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('acno')?.touched" ><p >incorrect account number</p></div>
+
+                        <input type="password" formControlName="password" id="p1" placeholder="Password"> <br><br>
+                        <div *ngIf="this.registerForm.get('password')?.errors && this.registerForm.get('acno')?.touched" ><p >incorrect account number</p></div>
+
+                        <button type="submit">register</button>
+                  </div>
+
+            </div>
+      </form>
+</div>

@@ -15,8 +15,8 @@ h1{
 .register{
     background-color: rgba(236, 234, 234, 0.4);
     padding: 50px;
-    width: 2000vw;
-    height: 40vh;
+    width: 50vw;
+    height: 70vh;
     align-items: center;
     justify-content: center;
     display: flex;

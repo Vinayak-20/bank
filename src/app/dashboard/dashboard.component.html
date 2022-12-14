@@ -1,37 +1,60 @@
-
-   <!-- <h1 style="color: white;">Welcome {{user}}</h1>
+<!-- <h1 style="color: white;">Welcome {{user}}</h1>
    <a href="/transaction">view trasaction history</a> -->
-    
-    <div class="dashboard">
-        <div>
-            <h1 style="color: white;">Welcome {{user}}</h1>
-            <a  routerLink="/transaction">view trasaction history</a>
-        </div>
-        
-    
-      <form (ngSubmit)="deposit()">
-            <div class="deposit">
-                <h2>Deposit Form</h2>
-        
-                <input [(ngModel)]="acno"  name="acno" type="text" id="acno" placeholder="Account number"> <br><br>
-                <input [(ngModel)]="psw"  name="psw" type="password" id="psw" placeholder="Password"> <br><br>
-                <input [(ngModel)]="amnt"  name="amnt" type="text" id="amnt" placeholder="Amount"> <br><br>
-    
-                <button type="submit" >Deposit</button>
-        
-            </div>
-      </form>
-    
-       <form (ngSubmit)="withdraw()">
-            <div class="withdraw">
-                <h2>Withdrawal Form</h2>
-                <input [(ngModel)]="a1"  name="a1" type="text" id="a1" placeholder="Account number"> <br>  <br>
-                <input [(ngModel)]="p1"   name="p1" type="password" id="p1" placeholder="Password"> <br><br>
-                <input  [(ngModel)]="b1"  name="b1" type="text" id="b1" placeholder="Amount"> <br><br>
-    
-                <button type="submit">Withdraw</button>
-        
-            </div>
-       </form>
-    
+
+<div class="dashboard">
+    <div>
+        <h1 style="color: white;">Welcome {{user}}</h1>
+        <a routerLink="/transaction">view trasaction history</a>
     </div>
+
+
+    <form (ngSubmit)="deposit()" [formGroup]="depositForm">
+        <div class="deposit">
+            <h2>Deposit Form</h2>
+
+            <input formControlName="acno" name="acno" type="text" id="acno" placeholder="Account number"> <br>
+            <div *ngIf="this.depositForm.get('acno')?.errors && this.depositForm.get('acno')?.touched">
+                <p style="color: red;">incorrect account number</p>
+            </div>
+
+            <input formControlName="psw" name="psw" type="password" id="psw" placeholder="Password"> <br>
+            <div *ngIf="this.depositForm.get('psw')?.errors && this.depositForm.get('psw')?.touched">
+                <p style="color: red;">incorrect password</p>
+            </div>
+
+            <input formControlName="amnt" name="amnt" type="text" id="amnt" placeholder="Amount"> <br>
+            <div *ngIf="this.depositForm.get('amnt')?.errors && this.depositForm.get('amnt')?.touched">
+                <p style="color: red;">invalid amount</p>
+            </div>
+
+
+            <button type="submit">Deposit</button>
+
+        </div>
+    </form>
+
+    <form (ngSubmit)="withdraw()" [formGroup]="withdrawForm">
+        <div class="withdraw">
+            <h2>Withdrawal Form</h2>
+            <input formControlName="a1" name="a1" type="text" id="a1" placeholder="Account number"> <br> 
+            <div *ngIf="this.withdrawForm.get('a1')?.errors && this.withdrawForm.get('a1')?.touched">
+                <p style="color: red;">incorrect account number</p>
+            </div>
+
+            <input formControlName="p1" name="p1" type="password" id="p1" placeholder="Password"> <br>
+            <div *ngIf="this.withdrawForm.get('p1')?.errors && this.withdrawForm.get('p1')?.touched">
+                <p style="color: red;">incorrect password</p>
+            </div>
+
+            <input formControlName="b1" name="b1" type="text" id="b1" placeholder="Amount"> <br>
+            <div *ngIf="this.withdrawForm.get('b1')?.errors && this.withdrawForm.get('b1')?.touched">
+                <p style="color: red;">invalid amount</p>
+            </div>
+
+
+            <button type="submit">Withdraw</button>
+
+        </div>
+    </form>
+
+</div>

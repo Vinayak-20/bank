@@ -72,7 +72,7 @@ steps to create service
 
 
 
-...///////////////////////////////////////////////////////////////////..............
+...........///////////////////////////////////////////////////////////////////..............
 
 ANGULAR DIRECTIVES
 
@@ -81,6 +81,8 @@ ANGULAR DIRECTIVES
 1.Structural dirctives- to handle structured data in view(html page) of a component
   
      .to use for loop in html /to access element from an array we use - ngFor
+
+     .to use if loop in html we use - ngIf
 
 
 
@@ -91,8 +93,46 @@ Form Validation In Angular
 we can create forms in two ways
 
   1.Template Driven Form
-  
+
   2. Model Driven Form
+       -technique in model Driven form- Reactive Form
+       .....................................
+       ReactiveFormsModule- module used to create model forms
+
+       FormBuilder - class in ReactiveFormsModule
+
+          In a form there will be a - group,array,control
+
+
+      ........................................
+      Validate model form
+         here wwe use a class called "validator"
+
+         it is a class in angular it also includes methods for apply Validation
+
+         how to access errors in validator rule
+
+              this.registerForm.get('uname')?.errors
+                 
+                  output may be 
+                     invalid or valid
+                   if the error is valid then we will get empty response.
+                   if the error is invalid then we will get a content.
+
+
+
+  ...............................................................
+  Local Storage in angular
+
+  . to store data temporarly
+  . method to store we use localStorage.setItem()
+  . to acces we use localStorage.getItem()
+  . to delete we use localStorage.removeItem()
+
+
+                  
+               
+
 
 
 
