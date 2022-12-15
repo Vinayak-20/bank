@@ -84,6 +84,10 @@ ANGULAR DIRECTIVES
 
      .to use if loop in html we use - ngIf
 
+2.component dirctives
+
+3.Atribute dirctives
+
 
 
 
@@ -128,6 +132,21 @@ we can create forms in two ways
   . method to store we use localStorage.setItem()
   . to acces we use localStorage.getItem()
   . to delete we use localStorage.removeItem()
+
+
+...............................................................
+Parent Child components communication in Angular
+
+
+........................
+ngClass used to give class Atribute
+
+.............................
+Date in Angular
+
+date- class
+
+.create an object of class date to acces date and time
 
 
                   

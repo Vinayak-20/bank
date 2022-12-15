@@ -1,14 +1,21 @@
 <!-- <h1 style="color: white;">Welcome {{user}}</h1>
    <a href="/transaction">view trasaction history</a> -->
 
+
+ 
 <div class="dashboard">
     <div>
         <h1 style="color: white;">Welcome {{user}}</h1>
+        <h5 style="color: white;" >{{dateandtime | date : 'fullDate'}}</h5>
         <a routerLink="/transaction">view trasaction history</a>
     </div>
 
 
-    <form (ngSubmit)="deposit()" [formGroup]="depositForm">
+  <div class="dlt">
+    <app-deleteconfirm [item]="acno"  ></app-deleteconfirm>
+</div>
+
+    <form [ngClass]="acno? 'style':'' "  (ngSubmit)="deposit()" [formGroup]="depositForm">
         <div class="deposit">
             <h2>Deposit Form</h2>
 
@@ -33,7 +40,7 @@
         </div>
     </form>
 
-    <form (ngSubmit)="withdraw()" [formGroup]="withdrawForm">
+    <form [ngClass]="acno? 'style':'' "   (ngSubmit)="withdraw()" [formGroup]="withdrawForm">
         <div class="withdraw">
             <h2>Withdrawal Form</h2>
             <input formControlName="a1" name="a1" type="text" id="a1" placeholder="Account number"> <br> 
@@ -54,7 +61,16 @@
 
             <button type="submit">Withdraw</button>
 
+            <button  class="c" type="submit" (click)="logout()">Logout</button>
+
         </div>
+
+
+
     </form>
 
+
 </div>
+<button class="d" (click)="Deleteconfirm()" >Delete</button>
+
+

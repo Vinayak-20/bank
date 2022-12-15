@@ -1,0 +1,21 @@
+button{
+    margin: 5px;
+  
+}
+
+.y{
+    color: green;
+}
+.y:hover{
+    background-color: green;
+    color: black;
+}
+
+.n{
+    color: red;
+
+}
+.n:hover{
+    background-color: red;
+    color: black;
+}

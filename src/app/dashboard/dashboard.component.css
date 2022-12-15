@@ -59,3 +59,42 @@ a{
 a:hover{
     text-decoration: underline;
 }
+.c:hover{
+    background-color: red;
+    color: white;
+}
+.c{
+    border: red 1px solid;
+    border-radius: 10px;
+}
+
+.d{
+    border: rgb(35, 18, 18) 1px solid;
+    /* border-radius: 10px; */
+}
+
+.d:hover{
+    background-color: rgba(219, 219, 7, 0.856);
+    color: black;
+}
+
+.dlt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+    /* border: 1px solid black; */
+    height: 90px;
+    width: 400px;
+    /* background-color: wheat; */
+    text-align: center;
+    /* margin-top: 15%; */
+    /* margin: 20px; */
+    color: white;
+    margin-left: 45%;
+
+}
+.style{
+    opacity: 0;
+
+}
