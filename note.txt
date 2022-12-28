@@ -138,6 +138,19 @@ we can create forms in two ways
 Parent Child components communication in Angular
 
 
+@input - used to share data from Parent to Child
+
+@output- used to share data from Child to Parent
+
+     this data are shared only via selector if component
+
+.............................................................................
+   USER DEFINED EVENT CREATION IN ANGULAR
+   
+   EventEmitter (from angular core)- class used to create events
+   emit()- to start the event
+   
+
 ........................
 ngClass used to give class Atribute
 
@@ -147,6 +160,31 @@ Date in Angular
 date- class
 
 .create an object of class date to acces date and time
+
+.......................................................
+Angular Pipe
+
+to transform datas into another format
+eg- date pipe
+
+
+...................................
+if in any case if we have to clone node modules
+ we use -  npm i
+
+
+
+/................................................../
+
+CLIENT SERVER INTEGRATION
+
+
+..http request creation. How to create 
+
+.HttpClientModule  -Module
+.HttpClient        -Class
+
+
 
 
                   

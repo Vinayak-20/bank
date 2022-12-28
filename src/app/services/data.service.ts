@@ -1,5 +1,6 @@
 
 //..................//
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -11,7 +12,8 @@ export class DataService {
   currentacno = ""
   userDetails: any
 
-  constructor() {
+  constructor(private http:HttpClient) {
+
     this.getdetails()
   }
   savedetails() {
@@ -47,15 +49,23 @@ export class DataService {
 
   // }
   register(acno: any, uname: any, psw: any) {
-    var userDetails = this.userDetails
-    if (acno in userDetails) {
-      return false
+  
+    const data={
+      acno,uname,psw
     }
-    else {
-      userDetails[acno] = { acno, username: uname, password: psw, balance: 0, transaction: [] }
-      this.savedetails()
-      return true
-    }
+
+   return this.http.post('http://localhost:3000/register',data) 
+   
+
+    // var userDetails = this.userDetails
+    // if (acno in userDetails) {
+    //   return false
+    // }
+    // else {
+    //   userDetails[acno] = { acno, username: uname, password: psw, balance: 0, transaction: [] }
+    //   this.savedetails()
+    //   return true
+    // }
   }
   login(acno: any, psw: any) {
 
@@ -143,6 +153,6 @@ export class DataService {
 
   }
   gettransaction(acno: any) {
-    // return this.userDetails[acno]["transaction"]
+    return this.userDetails[acno]["transaction"]
   }
 }

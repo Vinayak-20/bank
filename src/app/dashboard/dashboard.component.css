@@ -66,16 +66,22 @@ a:hover{
 .c{
     border: red 1px solid;
     border-radius: 10px;
+    display: flex;
+    margin-left: 90%;
+    
 }
 
 .d{
     border: rgb(35, 18, 18) 1px solid;
     /* border-radius: 10px; */
+    display: flex;
+    margin-left: 48%;
 }
 
 .d:hover{
     background-color: rgba(219, 219, 7, 0.856);
     color: black;
+   
 }
 
 .dlt{
